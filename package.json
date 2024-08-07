@@ -1,0 +1,14 @@
+{
+  "name": "cardprojects",
+  "version": "1.0.0",
+  "description": "A project to manage workload",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "InuDeveloper",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.3.1"
+  }
+}
