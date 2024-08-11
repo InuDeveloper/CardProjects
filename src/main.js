@@ -13,8 +13,10 @@ const CreateWindow = () => {
     win.loadFile('src/index.html')
 }
 
-app.whenReady().then(() => {
+// You typically listen to Node.js events by using an emitter's .on function.
+app.on('ready', () => {
     CreateWindow()
+    console.log('App ready')
 })
 
 app.on('window-all-closed', () => {
