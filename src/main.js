@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('node:path')
 
 const CreateWindow = () => {
@@ -6,7 +6,9 @@ const CreateWindow = () => {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, './script/preload.js'),
+            nodeIntegration: false,
+            contextIsolation: true,
+            preload: path.join(__dirname, '@script/preload.js'),
         },
     })
 
@@ -16,6 +18,10 @@ const CreateWindow = () => {
 // You typically listen to Node.js events by using an emitter's .on function.
 app.on('ready', () => {
     CreateWindow()
+    ipcMain.on('button-clicked', () => {
+        console.log('Button click')
+    })
+
     console.log('App ready')
 })
 

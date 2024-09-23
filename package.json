@@ -4,7 +4,7 @@
   "description": "A project to manage workload",
   "main": "./src/main.js",
   "scripts": {
-    "dev:start": "electron .",
+    "dev": "electron .",
     "Fstart": "electron-forge start",
     "Fpackage": "electron-forge package",
     "Fmake": "electron-forge make"
@@ -20,7 +20,7 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
     "@electron-forge/plugin-fuses": "^7.4.0",
     "@electron/fuses": "^1.8.0",
-    "electron": "^31.3.1"
+    "electron": "31.6.0"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
